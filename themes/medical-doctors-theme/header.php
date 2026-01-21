@@ -41,10 +41,6 @@
                         'theme_location' => 'primary',
                         'menu_id'        => 'primary-menu',
                         'menu_class'     => 'nav-menu',
-                        'fallback_cb'    => function () {
-                            // Если меню не создано, показать ссылку на создание
-                            echo '<a href="' . admin_url( 'nav-menus.php' ) . '">' . __( 'Create a menu', 'medical-doctors' ) . '</a>';
-                        },
                 ] );
                 ?>
             </nav>
