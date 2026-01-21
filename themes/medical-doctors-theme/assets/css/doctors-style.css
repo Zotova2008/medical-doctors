@@ -1,0 +1,323 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+}
+
+header {
+  padding: 20px 0;
+}
+
+footer {
+  padding: 20px 0;
+}
+
+body main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.doctors-filters {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.filters-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 20px;
+}
+
+.filter-group {
+  min-width: 200px;
+  flex: 1;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.filter-submit {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  background: #0073aa;
+  cursor: pointer;
+}
+
+.filter-submit:hover {
+  background: #005177;
+}
+
+.filter-reset {
+  display: inline-block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #dc3232;
+}
+
+.filter-reset:hover {
+  text-decoration: underline;
+}
+
+.doctors-grid {
+  display: grid;
+  margin-bottom: 40px;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.doctor-card {
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: #fff;
+  transition: box-shadow 0.3s;
+}
+
+.doctor-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-image .no-image {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  background: #f0f0f0;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.doctor-name {
+  margin: 0 0 15px 0;
+  font-size: 1.3em;
+}
+
+.doctor-name a {
+  text-decoration: none;
+  color: #333;
+}
+
+.doctor-name a:hover {
+  color: #0073aa;
+}
+
+.doctor-specializations, .doctor-meta-small {
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.doctor-meta-small span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #0073aa;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
+.pagination-wrapper {
+  margin: 40px 0;
+}
+
+.pagination-wrapper .nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pagination-wrapper .page-numbers {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+}
+
+.pagination-wrapper .page-numbers.current {
+  border-color: #0073aa;
+  color: white;
+  background: #0073aa;
+}
+
+.pagination-wrapper .page-numbers:hover:not(.current) {
+  background: #f0f0f0;
+}
+
+.doctor-single {
+  margin-bottom: 40px;
+  padding: 40px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.doctor-header {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.doctor-title {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.doctor-content-wrapper {
+  display: grid;
+  margin-bottom: 30px;
+  gap: 30px;
+  grid-template-columns: 300px 1fr;
+}
+
+.doctor-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.doctor-meta {
+  padding: 20px;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+
+.meta-item {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.meta-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.doctor-content h2 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.doctor-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 2px solid #f0f0f0;
+}
+
+.back-link {
+  font-weight: 600;
+  text-decoration: none;
+  color: #0073aa;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* Контейнер для логотипа и меню */
+.header-container {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 1px solid #e0e0e0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Меню */
+.main-navigation {
+  display: block;
+}
+
+.nav-menu {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-menu a {
+  padding: 10px 0;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #0073aa;
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .doctor-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-form {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    min-width: 100%;
+  }
+}
